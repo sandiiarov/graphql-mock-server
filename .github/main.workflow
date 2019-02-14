@@ -1,6 +1,6 @@
-workflow "TSC, Test, Build and Publish" {
+workflow "TSC, Build and Publish" {
   on = "push"
-  resolves = ["TSC", "Publish docs", "Publish package"]
+  resolves = ["TSC", "Publish package"]
 }
 
 action "Install" {
@@ -20,22 +20,6 @@ action "Master" {
   needs = "TSC"
   uses = "actions/bin/filter@master"
   args = "branch master"
-}
-
-action "Build docs" {
-  needs = "Master"
-  uses = "actions/npm@master"
-  runs = "yarn"
-  args = "docz:build"
-}
-
-action "Publish docs" {
-  needs = "Build docs"
-  uses = "maxheld83/ghpages@v0.1.1"
-  env = {
-    BUILD_DIR = ".docz/dist"
-  }
-  secrets = ["GITHUB_TOKEN"]
 }
 
 action "Build package" {
