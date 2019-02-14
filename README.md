@@ -1,6 +1,19 @@
 How to write mocks
 https://www.apollographql.com/docs/graphql-tools/mocking.html
 
+## Install
+```sh
+yarn -g install graphql-mock-server
+```
+
+## Usage
+```sh
+graphql-mock-server ./schema.graphql -p 4000
+```
+```sh
+gms ./schema.graphql -p 4000
+```
+
 ## Basic example
 
 ```js
