@@ -2,14 +2,23 @@ How to write mocks
 https://www.apollographql.com/docs/graphql-tools/mocking.html
 
 ## Install
+
 ```sh
-yarn -g install graphql-mock-server
+yarn global add graphql-mock-server
+```
+
+or
+
+```sh
+yarn add --dev graphql-mock-server
 ```
 
 ## Usage
+
 ```sh
 graphql-mock-server ./schema.graphql -p 4000
 ```
+
 ```sh
 gms ./schema.graphql -p 4000
 ```
@@ -17,10 +26,7 @@ gms ./schema.graphql -p 4000
 ## Basic example
 
 ```js
-const serializedMocks = mock => Object.entries(mock).reduce(
-  (acc, [key, value]) => ({ ...acc, [key]: value.toString() }),
-  {}
-);
+import { serializedMocks } from 'graphql-mock-server';
 
 const mock = {
   Query: () => ({
@@ -34,7 +40,7 @@ const mock = {
         name: 'Baz',
       },
     ],
-  })
+  }),
 };
 
 const data = serializedMocks(mock);
@@ -47,6 +53,6 @@ fetch('http://localhost:4000/mock', {
 
 // Reset mock
 fetch('http://localhost:4000/reset', {
-  method: 'POST'
+  method: 'POST',
 });
 ```

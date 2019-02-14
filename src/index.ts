@@ -3,8 +3,25 @@ import bodyParser from 'body-parser';
 import program from 'commander';
 import express from 'express';
 import fs from 'fs';
-// @ts-ignore
-import { addMockFunctionsToSchema, removeMockFunctionsFromSchema } from 'lunar-core';
+import {
+  addMockFunctionsToSchema,
+  removeMockFunctionsFromSchema,
+} from 'lunar-core';
+
+const toFunction = (str: string): (() => void) =>
+  Function.call(null, `return ${str}`)();
+
+export const serializedMocks = (body: { [name: string]: () => unknown }) =>
+  Object.entries(body).reduce(
+    (acc, [key, value]) => ({ ...acc, [key]: value.toString() }),
+    {}
+  );
+
+export const deserialize = (body: { [name: string]: string }) =>
+  Object.entries(body).reduce(
+    (acc, [key, value]) => ({ ...acc, [key]: toFunction(value) }),
+    {}
+  );
 
 export default async function() {
   program
@@ -17,14 +34,6 @@ export default async function() {
     port,
     args: [file],
   } = program;
-
-  const toFunction = (str: string) => Function.call(null, `return ${str}`)();
-
-  const deserialize = (body: { [name: string]: any }) =>
-    Object.keys(body).reduce(
-      (packet, key) => ({ ...packet, [key]: toFunction(body[key]) }),
-      {}
-    );
 
   const schema = makeExecutableSchema({
     typeDefs: fs.readFileSync(file, 'utf8'),
