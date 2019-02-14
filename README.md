@@ -17,8 +17,8 @@ gms ./schema.graphql -p 4000
 ## Basic example
 
 ```js
-const serializedMocks = Object.entries(mocks).reduce(
-  (packet, [key, value]) => ({ ...packet, [key]: value.toString() }),
+const serializedMocks = mock => Object.entries(mock).reduce(
+  (acc, [key, value]) => ({ ...acc, [key]: value.toString() }),
   {}
 );
 
