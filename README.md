@@ -39,11 +39,13 @@ const mock = {
 
 const data = serializedMocks(mock);
 
+// Set mock
 fetch('http://localhost:4000/mock', {
   method: 'POST',
   body: JSON.stringify(data),
 });
 
+// Reset mock
 fetch('http://localhost:4000/reset', {
   method: 'POST'
 });
