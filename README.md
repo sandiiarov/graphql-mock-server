@@ -92,6 +92,8 @@ yarn add --dev cypress-graphql-mock-server
 // support/index.js
 
 import 'cypress-graphql-mock-server';
+
+beforeEach(() => cy.resetGQLMock());
 ```
 
 If you are using TypeScript
