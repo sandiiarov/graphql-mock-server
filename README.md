@@ -70,7 +70,7 @@ Since the mock functions on fields are actually just GraphQL resolvers, you can 
 }
 ```
 
-## Using with Cypress
+## Cypress
 ```sh
 yarn add --dev cypress-graphql-mock-server
 ```
