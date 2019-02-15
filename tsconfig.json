@@ -6,7 +6,8 @@
     "jsx": "react",
     "strict": true,
     "allowSyntheticDefaultImports": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "types": ["cypress"]
   },
   "include": ["src"]
 }

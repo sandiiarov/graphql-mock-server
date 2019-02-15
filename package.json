@@ -1,16 +1,30 @@
 {
   "name": "graphql-mock-server",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "GraphQL Mock Server",
   "scripts": {
     "tsc": "tsc --noEmit"
   },
   "@pika/pack": {
     "pipeline": [
-      ["@pika/plugin-ts-standard-pkg"],
-      ["@pika/plugin-build-node"],
-      ["@pika/plugin-simple-bin", { "bin": "graphql-mock-server" }],
-      ["@pika/plugin-simple-bin", { "bin": "gms" }]
+      [
+        "@pika/plugin-ts-standard-pkg"
+      ],
+      [
+        "@pika/plugin-build-node"
+      ],
+      [
+        "@pika/plugin-simple-bin",
+        {
+          "bin": "graphql-mock-server"
+        }
+      ],
+      [
+        "@pika/plugin-simple-bin",
+        {
+          "bin": "gms"
+        }
+      ]
     ]
   },
   "dependencies": {
@@ -26,6 +40,7 @@
     "@pika/plugin-build-node": "0.3.10",
     "@pika/plugin-simple-bin": "0.3.10",
     "@pika/plugin-ts-standard-pkg": "0.3.10",
+    "cypress": "3.1.5",
     "typescript": "3.3.3"
   }
 }
