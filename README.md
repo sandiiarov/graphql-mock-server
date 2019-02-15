@@ -56,3 +56,16 @@ fetch('http://localhost:4000/reset', {
   method: 'POST',
 });
 ```
+
+### Accessing arguments in mock resolvers
+
+Since the mock functions on fields are actually just GraphQL resolvers, you can use arguments and context in them as well:
+
+```js
+{
+  Query: () => ({
+    // the number of friends in the list now depends on numPages
+    paginatedFriends: (root, { numPages }) => new MockList(numPages * PAGE_SIZE),
+  }),
+}
+```
