@@ -1,6 +1,6 @@
 {
   "name": "graphql-mock-server",
-  "version": "0.0.8",
+  "version": "0.1.0",
   "description": "GraphQL Mock Server",
   "scripts": {
     "tsc": "tsc --noEmit"
