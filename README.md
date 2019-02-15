@@ -77,14 +77,27 @@ Since the mock functions on fields are actually just GraphQL resolvers, you can 
 ```sh
 yarn add --dev cypress-graphql-mock-server
 ```
-add to `support\index.js`
+
 ```js
+// cypress.json
+
+{
+  "env": {
+    "GRAPHL_MOCK_SERVER": "http://localhost:<PORT>"
+  }
+}
+```
+
+```js
+// support/index.js
+
 import 'cypress-graphql-mock-server';
 ```
-If you are using TypeScript
 
-add to `tsconfig.json`
+If you are using TypeScript
 ```js
+// tsconfig.json
+
 {
   "compilerOptions": {
     ...
@@ -92,6 +105,7 @@ add to `tsconfig.json`
   }
 }
 ```
+
 ### Generate types
 You can also generate TS types using GraphQL schema.
 For type generating you should use https://github.com/dotansimha/graphql-code-generator
