@@ -636,10 +636,10 @@
     debug "^3.1.0"
     lodash.once "^4.1.1"
 
-"@pika/pack@0.3.1":
-  version "0.3.1"
-  resolved "https://registry.npmjs.org/@pika/pack/-/pack-0.3.1.tgz#a8dc9dfad776199a60061c113c46fb80773632fe"
-  integrity sha512-8ZnFFNsmKdjWiNsfS7OMrDjspiSesquHc/6Mv48XyudQ7CEmFR+UNu5kvPmJGwr8mr9wEs9Oh7T8LKDh9g4tkw==
+"@pika/pack@0.3.2":
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/@pika/pack/-/pack-0.3.2.tgz#a193a60edf9f8d923a01bc860ea1e0a20a9ec678"
+  integrity sha512-bxvqV1K9/nLRVbM4//Zdh9vVOA1jPZKBXjHhb870UokkH1UV5FEFQb7h+gZCkVcYipZ2Mm3rlV/TzENi1a3FqQ==
   dependencies:
     "@pika/types" "^0.3.3"
     camelcase "^4.0.0"
@@ -661,7 +661,6 @@
     issue-regex "^2.0.0"
     loud-rejection "^1.2.0"
     mkdirp "^0.5.1"
-    new-github-release-url "^0.1.0"
     opn "^5.4.0"
     p-timeout "^2.0.1"
     read "^1.0.7"
@@ -702,8 +701,8 @@
     standard-pkg "^0.2.0"
 
 "@pika/types@^0.3.3", "@pika/types@^0.3.5":
-  version "0.3.1"
-  resolved "https://registry.npmjs.org/@pika/types/-/types-0.3.8.tgz#4356dcfdc115c5371bc0b96a31d12e4e506ceb53"
+  version "0.3.8"
+  resolved "https://registry.yarnpkg.com/@pika/types/-/types-0.3.8.tgz#4356dcfdc115c5371bc0b96a31d12e4e506ceb53"
   integrity sha512-hzc0IHPvz4sdlaXP4Gzu9x1WF6CUTxyXbiYDLzxJQP9kvp8w4raeL0TB9YVFyayy6bplTaakTIoNrayy0ApBbw==
 
 "@protobufjs/aspromise@^1.1.1", "@protobufjs/aspromise@^1.1.2":
@@ -2911,11 +2910,6 @@ negotiator@0.6.1:
   version "0.6.1"
   resolved "https://registry.npmjs.org/negotiator/-/negotiator-0.6.1.tgz#2b327184e8992101177b28563fb5e7102acd0ca9"
   integrity sha1-KzJxhOiZIQEXeyhWP7XnECrNDKk=
-
-new-github-release-url@^0.1.0:
-  version "0.1.0"
-  resolved "https://registry.npmjs.org/new-github-release-url/-/new-github-release-url-0.1.0.tgz#942bba0ce45ac69ff6879a0b4261f1979dfc6e95"
-  integrity sha512-2rtsTFdC6C+KLy0kipybk1q+F6j/zzDb3oTWUfPjx4a4V7qs6xJSupeXfPcE9cpW2A+7sFvhS7+9CVRNxIb7pw==
 
 nice-try@^1.0.4:
   version "1.0.5"
