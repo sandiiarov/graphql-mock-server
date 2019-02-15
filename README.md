@@ -1,6 +1,3 @@
-How to write mocks
-https://www.apollographql.com/docs/graphql-tools/mocking.html
-
 ## Install
 
 ```sh
@@ -57,6 +54,9 @@ fetch('http://localhost:4000/reset', {
 });
 ```
 
+How to write mocks
+https://www.apollographql.com/docs/graphql-tools/mocking.html
+
 ### Accessing arguments in mock resolvers
 
 Since the mock functions on fields are actually just GraphQL resolvers, you can use arguments and context in them as well:
@@ -67,5 +67,25 @@ Since the mock functions on fields are actually just GraphQL resolvers, you can 
     // the number of friends in the list now depends on numPages
     paginatedFriends: (root, { numPages }) => new MockList(numPages * PAGE_SIZE),
   }),
+}
+```
+
+## Using with Cypress
+```sh
+yarn add --dev cypress-graphql-mock-server
+```
+add to `support\index.js`
+```js
+import 'cypress-graphql-mock-server';
+```
+If you are using TypeScript
+
+add to `tsconfig.json`
+```js
+{
+  "compilerOptions": {
+    ...
+    "types": ["cypress-graphql-mock-server"]
+  }
 }
 ```
