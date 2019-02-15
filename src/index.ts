@@ -11,13 +11,13 @@ import {
 const toFunction = (str: string): (() => void) =>
   Function.call(null, `return ${str}`)();
 
-export const serializedMocks = (body: { [name: string]: () => unknown }) =>
+export const serialize = <T>(body: T) =>
   Object.entries(body).reduce(
     (acc, [key, value]) => ({ ...acc, [key]: value.toString() }),
     {}
   );
 
-export const deserialize = (body: { [name: string]: string }) =>
+export const deserialize = <T>(body: T) =>
   Object.entries(body).reduce(
     (acc, [key, value]) => ({ ...acc, [key]: toFunction(value) }),
     {}

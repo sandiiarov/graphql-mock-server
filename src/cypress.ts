@@ -20,16 +20,3 @@ declare namespace Cypress {
     resetGQLMock(): Cypress.Chainable<Response>;
   }
 }
-
-Cypress.Commands.add('setGQLMock', <T>(mocks: T) => {
-  const serializedMocks = Object.entries(mocks).reduce(
-    (packet, [key, value]) => ({ ...packet, [key]: value.toString() }),
-    {}
-  );
-
-  cy.request('POST', `${Cypress.env('MOCK_HOST')}/store/mock`, serializedMocks);
-});
-
-Cypress.Commands.add('resetGQLMock', () => {
-  cy.request('POST', `${Cypress.env('MOCK_HOST')}/store/reset`);
-});
