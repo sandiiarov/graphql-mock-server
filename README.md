@@ -94,7 +94,7 @@ add to `tsconfig.json`
 ```
 ### Generate types
 You can also generate TS types using GraphQL schema.
-You need use https://github.com/dotansimha/graphql-code-generator
+For type generating you should use https://github.com/dotansimha/graphql-code-generator
 with plugins:
  - graphql-codegen-typescript-common
  - graphql-codegen-typescript-server
