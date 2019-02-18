@@ -115,3 +115,9 @@ You need to use https://github.com/dotansimha/graphql-code-generator with plugin
  - graphql-codegen-typescript-server
  - graphql-codegen-typescript-mocks
  
+![](https://github.com/sandiiarov/graphql-mock-server/blob/master/assets/Screen%20Shot%202019-02-17%20at%206.14.54%20PM.png)
+![](https://github.com/sandiiarov/graphql-mock-server/blob/master/assets/Screen%20Shot%202019-02-17%20at%206.15.08%20PM.png)
+![](https://github.com/sandiiarov/graphql-mock-server/blob/master/assets/Screen%20Shot%202019-02-17%20at%206.15.52%20PM.png)
+![](https://github.com/sandiiarov/graphql-mock-server/blob/master/assets/Screen%20Shot%202019-02-17%20at%206.16.22%20PM.png)
+![](https://github.com/sandiiarov/graphql-mock-server/blob/master/assets/Screen%20Shot%202019-02-17%20at%206.16.56%20PM.png)
+![](https://github.com/sandiiarov/graphql-mock-server/blob/master/assets/Screen%20Shot%202019-02-17%20at%206.17.48%20PM.png)
