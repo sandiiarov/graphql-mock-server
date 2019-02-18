@@ -110,8 +110,7 @@ If you are using TypeScript
 
 ### Generate types
 You can also generate TS types using GraphQL schema.
-For type generating you should use https://github.com/dotansimha/graphql-code-generator
-with plugins:
+You need to use https://github.com/dotansimha/graphql-code-generator with plugins:
  - graphql-codegen-typescript-common
  - graphql-codegen-typescript-server
  - graphql-codegen-typescript-mocks
