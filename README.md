@@ -26,7 +26,7 @@ gms ./schema.graphql -p 4000
 ## Basic example
 
 ```js
-import { serializedMocks } from 'graphql-mock-server';
+import { serialize } from 'graphql-mock-server';
 
 const mock = {
   Query: () => ({
@@ -43,7 +43,7 @@ const mock = {
   }),
 };
 
-const data = serializedMocks(mock);
+const data = serialize(mock);
 
 // Set mock
 fetch('http://localhost:4000/mock', {
