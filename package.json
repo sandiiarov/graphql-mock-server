@@ -14,7 +14,7 @@
     ]
   },
   "dependencies": {
-    "apollo-server-express": "2.4.7",
+    "apollo-server-express": "2.4.8",
     "body-parser": "1.18.3",
     "commander": "2.19.0",
     "express": "4.16.4",
