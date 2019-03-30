@@ -43,8 +43,6 @@ export default async function() {
   const app = express();
   const server = new ApolloServer({ schema });
 
-  app.use(bodyParser.json());
-  app.get('/', (req, res) => res.json({ port, schema }));
   app.post('/mock', (req, res) => {
     currentMocks.push(deserialize(req.body));
     addMockFunctionsToSchema({ schema, mocks: currentMocks });
