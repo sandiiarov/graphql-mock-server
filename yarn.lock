@@ -667,12 +667,12 @@
     rollup "^1.1.0"
     rollup-plugin-babel "^4.3.0"
 
-"@pika/plugin-simple-bin@0.3.16":
-  version "0.3.16"
-  resolved "https://registry.yarnpkg.com/@pika/plugin-simple-bin/-/plugin-simple-bin-0.3.16.tgz#95758a5ffa5b38f348b6c3a1e778f305b1d1b248"
-  integrity sha512-6wjX0A9gO4CAQx5O4H8fGYLasCXEJGqmF2//Iu6QMiuRM6M4aRo7uOqyN81pRCHUqf2XoR8x1uOdA88hOu6aSw==
+"@pika/plugin-simple-bin@0.4.0":
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/@pika/plugin-simple-bin/-/plugin-simple-bin-0.4.0.tgz#2dad8d5d3e73457ac3fedad2e936445714e5953e"
+  integrity sha512-vVtYT4pIp1oTZVNPirnU4XeQn+LLz0AIx6XgIGbOgknxYZghIG9zWMmBttvcSjcfnPGijKeSIuz+vgmaVBovJw==
   dependencies:
-    "@pika/types" "^0.3.5"
+    "@pika/types" "^0.4.0"
 
 "@pika/plugin-ts-standard-pkg@0.4.0":
   version "0.4.0"
@@ -683,7 +683,7 @@
     execa "^1.0.0"
     standard-pkg "^0.2.0"
 
-"@pika/types@^0.3.3", "@pika/types@^0.3.5":
+"@pika/types@^0.3.3":
   version "0.3.9"
   resolved "https://registry.yarnpkg.com/@pika/types/-/types-0.3.9.tgz#4356dcfdc115c5371bc0b96a31d12e4e506ceb53"
   integrity sha512-hzc0IHPvz4sdlaXP4Gzu9x1WF6CUTxyXbiYDLzxJQP9kvp8w4raeL0TB9YVFyayy6bplTaakTIoNrayy0ApBbw==
