@@ -809,12 +809,10 @@
     rollup "^1.1.0"
     rollup-plugin-babel "^4.3.0"
 
-"@pika/plugin-simple-bin@0.4.0":
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/@pika/plugin-simple-bin/-/plugin-simple-bin-0.4.0.tgz#2dad8d5d3e73457ac3fedad2e936445714e5953e"
-  integrity sha512-vVtYT4pIp1oTZVNPirnU4XeQn+LLz0AIx6XgIGbOgknxYZghIG9zWMmBttvcSjcfnPGijKeSIuz+vgmaVBovJw==
-  dependencies:
-    "@pika/types" "^0.4.0"
+"@pika/plugin-simple-bin@0.5.1":
+  version "0.5.1"
+  resolved "https://registry.yarnpkg.com/@pika/plugin-simple-bin/-/plugin-simple-bin-0.5.1.tgz#587fc97f7720d60bcd2598abc33347d231faec6e"
+  integrity sha512-D5dSrKDMpg/ZzWIVXQ3jf8mcotjV5bYx1gkaX7LmUtqvZs+wXaBW53C1hlnMF/47cUxQtmxWver7lsUec7OJ6A==
 
 "@pika/plugin-ts-standard-pkg@0.5.1":
   version "0.5.1"
@@ -828,11 +826,6 @@
   version "0.3.9"
   resolved "https://registry.yarnpkg.com/@pika/types/-/types-0.3.9.tgz#4356dcfdc115c5371bc0b96a31d12e4e506ceb53"
   integrity sha512-hzc0IHPvz4sdlaXP4Gzu9x1WF6CUTxyXbiYDLzxJQP9kvp8w4raeL0TB9YVFyayy6bplTaakTIoNrayy0ApBbw==
-
-"@pika/types@^0.4.0":
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/@pika/types/-/types-0.4.0.tgz#e55f4ddca4d1e6362b7f43ee7afc494c114a7d58"
-  integrity sha512-vgNcz+tvlWtHzLRmuGfpUU8I3tRTfv4YFnhrx8ZXag2kE3kPw/DnC4yMVCx9wgimI1iptyXGDTNYui+kyBGoDg==
 
 "@protobufjs/aspromise@^1.1.1", "@protobufjs/aspromise@^1.1.2":
   version "1.1.2"
