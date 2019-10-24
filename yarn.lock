@@ -818,12 +818,12 @@
     rollup "^1.1.0"
     rollup-plugin-babel "^4.3.0"
 
-"@pika/plugin-simple-bin@0.7.0":
-  version "0.7.0"
-  resolved "https://registry.yarnpkg.com/@pika/plugin-simple-bin/-/plugin-simple-bin-0.7.0.tgz#2854617c8e072f0e0bc6b932b35416db2a1ef4df"
-  integrity sha512-hNkYfKobtjtYi7GrQMZo8oJGGwK9wN3fRy/aC9l8+PMXm+MCNqD1RtO7gCjRroX1kYt1U6CZ3XOGyS9zsvN29Q==
+"@pika/plugin-simple-bin@0.7.1":
+  version "0.7.1"
+  resolved "https://registry.yarnpkg.com/@pika/plugin-simple-bin/-/plugin-simple-bin-0.7.1.tgz#6c2e631a8eedf98177763a17953f8f76a4ec4a0c"
+  integrity sha512-VAiBOIEmaBgaIM7F5VS3/AmUWMWs10owIlCo1+tEuE5fFGSX2BE+RtuHr2C+V7iXWSUpc6NLCyfRII/V+m5oYw==
   dependencies:
-    "@pika/types" "^0.7.0"
+    "@pika/types" "^0.7.1"
 
 "@pika/plugin-ts-standard-pkg@0.7.0":
   version "0.7.0"
