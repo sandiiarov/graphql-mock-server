@@ -1,22 +1,37 @@
 {
   "name": "graphql-mock-server",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "GraphQL Mock Server",
   "scripts": {
     "tsc": "tsc --noEmit"
   },
   "@pika/pack": {
     "pipeline": [
-      ["@pika/plugin-ts-standard-pkg"],
-      ["@pika/plugin-build-node"],
-      ["@pika/plugin-simple-bin", { "bin": "graphql-mock-server" }],
-      ["@pika/plugin-simple-bin", { "bin": "gms" }]
+      [
+        "@pika/plugin-ts-standard-pkg"
+      ],
+      [
+        "@pika/plugin-build-node"
+      ],
+      [
+        "@pika/plugin-simple-bin",
+        {
+          "bin": "graphql-mock-server"
+        }
+      ],
+      [
+        "@pika/plugin-simple-bin",
+        {
+          "bin": "gms"
+        }
+      ]
     ]
   },
   "dependencies": {
     "apollo-server-express": "2.17.0",
     "body-parser": "1.19.0",
     "commander": "2.20.3",
+    "cors": "^2.8.5",
     "express": "4.17.1",
     "graphql": "14.7.0",
     "lunar-core": "1.0.0"
