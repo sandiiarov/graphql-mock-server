@@ -2,6 +2,8 @@ import { ApolloServer, makeExecutableSchema } from 'apollo-server-express';
 import bodyParser from 'body-parser';
 import program from 'commander';
 import express from 'express';
+import { CorsOptions } from 'cors';
+
 import fs from 'fs';
 import {
   addMockFunctionsToSchema,
@@ -43,6 +45,24 @@ export default async function() {
   const app = express();
   const server = new ApolloServer({ schema });
 
+  const cors: CorsOptions = {
+    origin: [
+      `http://localhost:${port}`,
+      'http://localhost:3000',
+      'http://localhost:7000',
+      'http://localhost:8000',
+      'http://localhost:8080',
+      'http://localhost:9000',
+      'http://localhost:9090',
+    ],
+    methods: ['POST', 'GET', 'OPTIONS'],
+    preflightContinue: false,
+    optionsSuccessStatus: 204,
+    credentials: true,
+  };
+    
+  app.use(bodyParser.json())
+
   app.post('/mock', (req, res) => {
     currentMocks.push(deserialize(req.body));
     addMockFunctionsToSchema({ schema, mocks: currentMocks });
@@ -55,7 +75,7 @@ export default async function() {
     res.sendStatus(200);
   });
 
-  server.applyMiddleware({ app });
+  server.applyMiddleware({ app, cors });
 
   app.listen({ port }, () => {
     console.log(`🐬  GraphQL Mock Server running at http://localhost:${port}`);
